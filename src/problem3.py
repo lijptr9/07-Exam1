@@ -93,21 +93,18 @@ def problem3(rect, n, window):
       :type n:       int
       :type window:  rg.RoseWindow
     """
+    rect.attach_to(window)
+    x = rect.corner_2.x
+    y = rect.corner_2.y
     for k in range(n):
-        r = rect.height() / 2
+        height = rect.corner_2.y - rect.corner_1.y
+        r = height/2
+        center = rg.Point(x, y)
+        x = x + r*math.sin(math.pi/2)
+        y = y + r*math.sin(math.pi/2)
+        circle = rg.Circle(center, r)
 
-        point = rect.get_lower_right_corner()
-        x = point.x
-        y = point.y
-
-
-        x = x + k*r*math.cos(math.pi/2)
-        y = y + k*r*math.cos(math.pi/2)
-
-        b = rg.Circle(p, r)
-        b.attach_to(window)
-        a.attach_to(window)
-    return p
+        circle.attach_to(window)
 
 
     # -------------------------------------------------------------------------
