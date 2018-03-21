@@ -116,10 +116,16 @@ def problem2(line1, line2, thickness, win):
     """
     a = line1
     b = line2
+    corner1 = a.get_midpoint()
+    corner2 = b.get_midpoint()
+    rect = rg.Rectangle(corner1,corner2)
+    rect.outline_thickness = thickness
+    rect.outline_color = a.color
     a.thickness = thickness
     b.thickness = thickness
     a.attach_to(win)
     b.attach_to(win)
+    rect.attach_to(win)
 
 
     # -------------------------------------------------------------------------
