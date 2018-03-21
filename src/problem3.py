@@ -2,10 +2,11 @@
 Exam 1, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  March 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Ji Li.  March 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
+import math
 
 
 def main():
@@ -92,6 +93,23 @@ def problem3(rect, n, window):
       :type n:       int
       :type window:  rg.RoseWindow
     """
+    for k in range(n):
+        r = rect.height() / 2
+
+        point = rect.get_lower_right_corner()
+        x = point.x
+        y = point.y
+
+
+        x = x + k*r*math.cos(math.pi/2)
+        y = y + k*r*math.cos(math.pi/2)
+
+        b = rg.Circle(p, r)
+        b.attach_to(window)
+        a.attach_to(window)
+    return p
+
+
     # -------------------------------------------------------------------------
     # TODO: 2. Implement and test this function, TESTING each step as you go.
     #          Tests have been written for you (above).
