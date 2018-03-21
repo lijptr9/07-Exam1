@@ -94,8 +94,8 @@ def problem3(rect, n, window):
       :type window:  rg.RoseWindow
     """
     rect.attach_to(window)
-    x = rect.corner_2.x
-    y = rect.corner_2.y
+    x = rect.get_lower_right_corner().x
+    y = rect.get_lower_right_corner().y
     for k in range(n):
         height = rect.corner_2.y - rect.corner_1.y
         r = height/2
@@ -108,7 +108,7 @@ def problem3(rect, n, window):
 
 
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function, TESTING each step as you go.
+    # DONE: 2. Implement and test this function, TESTING each step as you go.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
