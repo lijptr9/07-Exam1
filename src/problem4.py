@@ -134,6 +134,13 @@ def problem4(m):
       -- problem4(97)   returns 0 because 97 has no non-trivial factors
                                  (i.e., it is prime)
     """
+    count = 0
+    for k in range(m):
+      if m % (k+1) == 1:
+         count = count +1
+
+    return count
+
 
     # -------------------------------------------------------------------------
     # TODO: 7. Implement and test this function.
