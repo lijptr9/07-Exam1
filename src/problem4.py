@@ -4,6 +4,7 @@ Exam 1, problem 4.
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
          their colleagues and Ji Li.  March 2018.
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
+import math
 
 
 def main():
@@ -135,9 +136,8 @@ def problem4(m):
                                  (i.e., it is prime)
     """
     count = 0
-    k = int
     for k in range(m+1):
-      if m == (k+1)*m/(k+1):
+      if k == math.factorial(m):
          count = count +1
 
     return count
