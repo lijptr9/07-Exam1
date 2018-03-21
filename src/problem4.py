@@ -135,15 +135,16 @@ def problem4(m):
                                  (i.e., it is prime)
     """
     count = 0
-    for k in range(m):
-      if m % (k+1) == 1:
+    k = int
+    for k in range(m+1):
+      if m == (k+1)*m/(k+1):
          count = count +1
 
     return count
 
 
     # -------------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
