@@ -137,10 +137,20 @@ def problem4(m):
     """
     count = 0
     for k in range(m+1):
-      if k == math.factorial(m):
-         count = count +1
+        s = k + 2
 
-    return count
+        total = 0
+
+        for r in range (m+1):
+            z= r+ 2
+
+            total= s*z
+
+            if total==m:
+                count= count +2
+
+    return count/2
+
 
 
     # -------------------------------------------------------------------------
