@@ -122,7 +122,6 @@ def problem2(line1, line2, thickness, win):
     rect.outline_thickness = thickness
     rect.outline_color = a.color
     a.thickness = thickness
-    b.thickness = thickness
     a.attach_to(win)
     b.attach_to(win)
     rect.attach_to(win)
